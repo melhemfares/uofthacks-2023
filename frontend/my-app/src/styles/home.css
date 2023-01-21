@@ -1,0 +1,60 @@
+/* Root */
+
+h1 {
+  font-size: 3rem;
+}
+
+.App {
+  margin: 0; 
+  text-align: center;
+}
+
+/* nav */
+
+.nav-logo {
+  width: 4%;
+  text-align: left;
+}
+
+.nav {
+  background-color: rgb(23, 33, 33);
+  text-align: right;
+  padding: 2%;
+  position: fixed;
+  width: 100%;
+}
+
+.nav a{
+  padding: 5px 2% 7px;
+  background-color: burlywood;
+  color: black;
+  text-decoration: none;
+  width: 5px 20px;
+  margin-right: 85px;
+  border-radius: 20px;
+}
+
+/* body */
+
+.body {
+  padding: 5% 7%;
+  background-color: black;
+  color:bisque; 
+}
+
+.chatbot-logo {
+  width: 30%;
+}
+
+.home-link {
+  padding: 1% 4%;
+  background-color: burlywood;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.home-link:hover, .nav a:hover {
+  text-decoration: underline;
+  color:darkorchid;
+}

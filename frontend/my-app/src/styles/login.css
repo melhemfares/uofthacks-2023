@@ -1,0 +1,45 @@
+.column {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    text-align: center;
+
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 10px white;
+}
+
+input {
+  padding: 2% 4%;
+  width: 80%;
+  border-radius: 20px;
+  margin: 1%;
+}
+
+button {
+  padding: 2% 6%;
+  border-radius: 50px;
+  margin-top: 10px;
+  color: black;
+  background-color: burlywood; 
+}
+
+.row {
+  margin-bottom: 7%;
+}
+
+.home {
+  text-align: center;
+}
