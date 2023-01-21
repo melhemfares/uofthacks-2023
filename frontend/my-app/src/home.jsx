@@ -24,14 +24,38 @@ function Home() {
         <br /> <br />
         <a className='home-link' href="/login">Try TherapyAI</a>
         <br /> <br />
-        <h3>How TherapyAI is Different</h3>
-        <h5>TherapyAI has the ablitity to detect the user's emotion, severity, and 
-            condition based on the user's input. From there, it makes constructive 
-            decision to respond the user's inquires. For instance, if the severity of 
-            the user is critical, it will directly give resources of medical assistance
-            while if its not critical, it will continue to chat with the user along  
-            with providing assistance. 
-        </h5>
+        <div className='container'>
+            <div className='object'>
+                <h3>How is TherapyAI Different</h3>
+                <h5>TherapyAI has the ablitity to detect the user's emotion, severity, and 
+                    condition based on the user's input. From there, it makes constructive 
+                    decision to respond the user's inquires. For instance, if the severity of 
+                    the user is critical, it will directly give resources of medical assistance
+                    while if its not critical, it will continue to chat with the user along  
+                    with providing assistance. 
+                </h5>
+            </div> 
+            <div className='object'>
+                <h3>How TherapyAI Can Help You</h3>
+                <h5>TherapyAI has the ablitity to detect the user's emotion, severity, and 
+                    condition based on the user's input. From there, it makes constructive 
+                    decision to respond the user's inquires. For instance, if the severity of 
+                    the user is critical, it will directly give resources of medical assistance
+                    while if its not critical, it will continue to chat with the user along  
+                    with providing assistance. 
+                </h5>
+            </div> 
+            <div className='object'>
+                <h3>The Next Steps for TherapyAI</h3>
+                <h5>TherapyAI has the ablitity to detect the user's emotion, severity, and 
+                    condition based on the user's input. From there, it makes constructive 
+                    decision to respond the user's inquires. For instance, if the severity of 
+                    the user is critical, it will directly give resources of medical assistance
+                    while if its not critical, it will continue to chat with the user along  
+                    with providing assistance. 
+                </h5>
+            </div> 
+        </div>
         
       </div>
     </div>

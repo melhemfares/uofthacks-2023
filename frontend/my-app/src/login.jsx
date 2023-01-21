@@ -13,28 +13,19 @@ function Login() {
         <div className="home">
             <h1>Try TherapyAI</h1>
         </div>
-        <div className="row">
-            <div className="column line">
-                <h2>Log In:</h2>
-                <p>Please Use Your Credentials to Log In Below</p>
-                <form action="submit" method='post'>
-                    <input type="text" placeholder="Username" name="username" />
-                    <br />
-                    <input type="password" placeholder='Password' name="pass" />
-                    <button type='submit' id='login_btn'>Log In</button>
-                </form>
-            </div>
-            <div className="column">
-            <h2>Sign Up:</h2>
-                <p>Please Use Your Credentials to Sign Up Below</p>
-                <form action="submit" method='post'>
-                    <input type="text" placeholder='Full Name' name="fullName" />
-                    <input type="email" placeholder='Email Address' name="email" />
-                    <input type="text" placeholder="Username" name="username" />
-                    <input type="password" placeholder='Password' name="pass" />
-                    <button type='submit' id='signup_btn'>Sign Up</button>
-                </form>
-            </div>
+        <div className="container">
+            <h2>Log In:</h2>
+            <p>Please Use Your Credentials to Log In Below</p>
+            <form action="submit" method='post'>
+                <input type="text" placeholder="Username" name="username" />
+                <br />
+                <input type="password" placeholder='Password' name="pass" />
+                <br />
+                <button type='submit' id='login_btn'>Log In</button>
+                <br /><br />
+                <a href="/signup">Dont Have An Account? Sign Up!</a>
+            </form>
+
         </div>
       </div>
     </div>

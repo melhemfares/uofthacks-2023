@@ -1,0 +1,30 @@
+input {
+    padding: 1% 2%;
+    width: 20%;
+    border-radius: 20px;
+    margin: 1%;
+  }
+  
+  button {
+    padding: 1% 4%;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: black;
+    background-color: burlywood; 
+  }
+  
+  .row {
+    margin-bottom: 7%;
+  }
+  
+  .home {
+    text-align: center;
+  }
+  
+  form a{
+    color: burlywood;
+  }
+  
+  body {
+    background-color: black;
+  }
