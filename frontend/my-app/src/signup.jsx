@@ -1,4 +1,4 @@
-import './styles/login.css';
+import './styles/signup.css';
 
 function Login() {
   return (

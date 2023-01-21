@@ -1,8 +1,10 @@
 input {
+  display: block;
   padding: 1% 2%;
   width: 20%;
   border-radius: 20px;
   margin: 1%;
+  border: none;
 }
 
 button {
@@ -10,7 +12,8 @@ button {
   border-radius: 50px;
   margin-top: 10px;
   color: black;
-  background-color: burlywood; 
+  background-color: #1176FF; 
+  border: none;
 }
 
 .row {
@@ -22,7 +25,7 @@ button {
 }
 
 form a{
-  color: burlywood;
+  color: #1176FF;
 }
 
 body {

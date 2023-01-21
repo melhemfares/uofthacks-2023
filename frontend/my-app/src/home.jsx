@@ -11,16 +11,17 @@ function Home() {
       </div>
 
       <div className="body">
-        <h1>TherapyAI</h1>
-        <h5>TherapyAI is a online chatbot that gives you instant acess to different 
-          resources available to you. It is often the case that there are no real 
-          person to talk to during difficult times. Thats when TherapyAI comes into 
-          play. It is an AI chatbot that can understand the individual's emotion and 
-          reacts accordingly. Whether its conneting them to a medical representative, 
-          or even just be there by the individual's side. 
-        </h5>
+        <div style={{textAlign: "left", marginTop: 50}}>
+          <h1><img className="chatbot-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="chatbot logo"/> TherapyAI.</h1>
+          <p>TherapyAI is an online chatbot that gives you instant acess to different 
+            resources available to you. It is often the case that there are no real 
+            person to talk to during difficult times. Thats when TherapyAI comes into 
+            play. It is an AI chatbot that can understand the individual's emotion and 
+            reacts accordingly. Whether its conneting them to a medical representative, 
+            or even just be there by the individual's side. 
+          </p>
+        </div>
 
-        <img className="chatbot-logo" src="https://www.startupchefs.in/wp-content/uploads/2021/04/chatbot-2.png" alt="chatbot logo"/>
         <br /> <br />
         <a className='home-link' href="/login">Try TherapyAI</a>
         <br /> <br />
@@ -55,6 +56,10 @@ function Home() {
                     with providing assistance. 
                 </h5>
             </div> 
+        </div>
+
+        <div className='footer'>
+          Powered by Co:here platform
         </div>
         
       </div>
