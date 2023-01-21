@@ -1,0 +1,33 @@
+input {
+  display: block;
+  padding: 1% 2%;
+  width: 20%;
+  border-radius: 20px;
+  margin: 1%;
+  border: none;
+}
+
+button {
+  padding: 1% 4%;
+  border-radius: 50px;
+  margin-top: 10px;
+  color: black;
+  background-color: #1176FF; 
+  border: none;
+}
+
+.row {
+  margin-bottom: 7%;
+}
+
+.home {
+  text-align: center;
+}
+
+form a{
+  color: #1176FF;
+}
+
+body {
+  background-color: black;
+}
