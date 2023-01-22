@@ -9,9 +9,9 @@ const register = async (req,res) => {
 }
 
 const login = async (req,res) => {
-    const {email, password} = req.body
-    if(!email || !password) {
-        throw new BadRequestError('Please provide email and password')
+    const {username, password} = req.body
+    if(!username || !password) {
+        throw new BadRequestError('Please provide username and password')
     }
     const user = await User.findOne({email})
     if(!user){

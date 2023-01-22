@@ -44,12 +44,10 @@ const classify = async (req, res) => {
 
   const severity = findSeverity.body.classifications[0]["prediction"]
 
-  console.log(`Prediction: ${emotion}, ${severity}`);
-
   const response = await cohere.generate({ 
     model: 'xlarge', 
     prompt: `${examples.sampleInputs}Input: ${input}\nProblem: ${emotion}\nSeverity: ${severity}\nAdvice:`, 
-    max_tokens: 50, 
+    max_tokens: 70, 
     temperature: 1, 
     k: 0, 
     p: 1, 
