@@ -1,16 +1,27 @@
 require('dotenv').config();
 const cohere = require('cohere-ai');
 const { StatusCodes } = require("http-status-codes")
-const { BadRequestError } = require('../errors')
+const Chat = require('../models/Chat')
 
 const fs = require('fs')
 
 let rawdata = fs.readFileSync('data.json')
 let examples = JSON.parse(rawdata)
 
-//console.log(examples)
-
 cohere.init(process.env.COHERE_API);
+
+const createConversation = async (req,res) => {
+  req.body.createdBy = req.user.userId
+
+  const check = await Chat.findOne({createdBy: req.body.createdBy})
+
+  if(!check) {
+    const initialize = await Chat.create(req.body)
+    res.status(StatusCodes.CREATED).json({initialize})
+  } else {
+    res.status(StatusCodes.OK).json({check})
+  }
+}
 
 const classify = async (req, res) => {
   const input = req.body.input
@@ -38,8 +49,8 @@ const classify = async (req, res) => {
   const response = await cohere.generate({ 
     model: 'xlarge', 
     prompt: `${examples.sampleInputs}Input: ${input}\nProblem: ${emotion}\nSeverity: ${severity}\nAdvice:`, 
-    max_tokens: 100, 
-    temperature: 0.8, 
+    max_tokens: 50, 
+    temperature: 1, 
     k: 0, 
     p: 1, 
     frequency_penalty: 0, 
@@ -49,10 +60,18 @@ const classify = async (req, res) => {
   }); 
   const reply = response.body.generations[0].text
 
-  res.status(StatusCodes.OK).json({ "msg": {"response": reply, "issue": [emotion, severity] }}) 
+  const msg = await Chat.findOneAndUpdate(
+    { createdBy: req.user.userId },
+    { $push: { conversation: {user: input, cpu: reply} } },
+    { new: true }
+  )
+  
+  console.log(msg)
 
+  res.status(StatusCodes.OK).json({ "msg": {"response": reply, "issue": [emotion, severity]} }) 
 } 
 
 module.exports = {
+  createConversation,
   classify
 }

@@ -21,7 +21,7 @@ const authenticateUser = require('./middleware/authentication')
 
 // routers
 const authRouter = require('./routes/auth')
-const jobsRouter = require('./routes/jobs')
+//const jobsRouter = require('./routes/jobs')
 const coRouter = require('./routes/co')
 
 // error handler
@@ -47,8 +47,8 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 // routes
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/co', coRouter)
-app.use('/api/v1/jobs', authenticateUser, jobsRouter)
+app.use('/api/v1/co', authenticateUser, coRouter)
+//app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
