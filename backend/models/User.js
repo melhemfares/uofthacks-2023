@@ -25,13 +25,13 @@ const UserSchema = new mongoose.Schema({
     },
     username: {
         type: String,
-        required:[true, 'Please provide a name'],
+        required:[true, 'Please provide a username'],
         minlength:3,
         maxlength:20
     },
     address: {
         type: String,
-        required:[true, 'Please provide a name'],
+        required:[true, 'Please provide an address'],
         minlength:3,
         maxlength:100
     }
