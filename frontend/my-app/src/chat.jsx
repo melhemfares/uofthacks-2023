@@ -35,13 +35,13 @@ render(){
   return (
     <div className='Chat'>
       <div className="nav">
-        <img src="" alt="" />
+      <img style={{marginRight:"950px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
         <a href="/">Home</a>
       </div>
 
 
 
-      <form onSubmit={this.handleSubmit}>
+      <form style={{marginTop:"100px"}} onSubmit={this.handleSubmit}>
         <input type="text" placeholder='Type something...'/>
         <button type='submit' id='msg_btn'>Send</button>
               <br />

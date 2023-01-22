@@ -36,7 +36,7 @@ export default class Login extends Component {
       <div className="App">
 
         <div className="nav">
-          <img src="" alt="" />
+        <img style={{marginRight:"950px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
           <a href="/">Home</a>
         </div>
 
