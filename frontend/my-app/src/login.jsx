@@ -50,15 +50,11 @@ export default class Login extends Component {
             {/* <form action="submit" method='post'> */}
             <form onSubmit={this.handleSubmit}>
               <input type="text" placeholder="Username" name="username"
-                onClick={e => {
-                  console.log(e.target.value);
-                  this.setState({ username: e.target.value })
-                }
-                }
+                onChange={e => this.setState({ username: e.target.value })}
               />
               <br />
               <input type="password" placeholder='Password' name="pass"
-                onClick={e => this.setState({ pass: e.target.value })}
+                onChange={e => this.setState({ pass: e.target.value })}
               />
               <br />
               <button type='submit' id='login_btn'>Log In</button>
