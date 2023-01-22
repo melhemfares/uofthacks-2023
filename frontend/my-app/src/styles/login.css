@@ -7,7 +7,7 @@ input {
   border: none;
 }
 
-button {
+#login_btn {
   padding: 1% 4%;
   border-radius: 50px;
   margin-top: 10px;

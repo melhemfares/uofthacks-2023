@@ -17,7 +17,7 @@ export default class Login extends Component {
     const { username, pass } = this.state;
     console.log(username, pass);
 
-    fetch('http://localhost:3000/api/v1/auth/login', {
+    fetch('http://localhost:5000/api/v1/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -56,8 +56,8 @@ export default class Login extends Component {
               <input type="password" placeholder='Password' name="pass"
                 onChange={e => this.setState({ pass: e.target.value })}
               />
-              <br />
-              <button type='submit' id='login_btn'>Log In</button>
+              <br /> <br />
+              <a href="/chat" id='login_btn'>Log In</a>
               <br /><br />
               <a href="/signup">Dont Have An Account? Sign Up!</a>
             </form>

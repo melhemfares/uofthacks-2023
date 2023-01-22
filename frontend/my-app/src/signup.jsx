@@ -20,7 +20,7 @@ export default class Signup extends Component {
     const { fullName, email, address, username, pass } = this.state;
     console.log(fullName, email, address, username, pass);
 
-    fetch('http://localhost:3000/api/v1/auth/register', {
+    fetch('http://localhost:5000/api/v1/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

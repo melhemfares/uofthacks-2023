@@ -2,7 +2,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Home from "./home"
 import Login from "./login"
 import Signup from "./signup"
-import Chat from "./Chat"
+import Chat from "./chat"
 
 function App() {
   return (
