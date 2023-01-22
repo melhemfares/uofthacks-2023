@@ -71,7 +71,7 @@ export default class Signup extends Component {
                 onChange={e => this.setState({ pass: e.target.value })}
               />
               <br />
-              <button type='submit' id='login_btn'>Log In</button>
+              <button type='submit' id='login_btn'>Sign up</button>
               <br /><br />
               <a href="/login">Already Have An Account? Log In!</a>
             </form>
