@@ -35,16 +35,18 @@ render(){
   return (
     <div className='Chat'>
       <div className="nav">
-      <img style={{marginRight:"950px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
+      <img style={{postion: "absolute", left:"100px", top: "10px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
         <a href="/">Home</a>
       </div>
 
+      <div className='body'>
+        <h2>Chat With TherapyAI in Real Time</h2>
+        <p>You can now chat with TherapyAI's automated chatbot! Start Typing!</p>
+      </div>
 
-
-      <form style={{marginTop:"100px"}} onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <input type="text" placeholder='Type something...'/>
         <button type='submit' id='msg_btn'>Send</button>
-              <br />
       </form>
 
 

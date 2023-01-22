@@ -6,7 +6,7 @@ function Home() {
 
       <div className="nav">
         {/* <h6>TherapyAI</h6> */}
-        <img style={{marginRight:"950px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
+        <img style={{postion: "absolute", left:"100px", top: "10px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
         <a href="/login">Try TherapyAI</a>
       </div>
 

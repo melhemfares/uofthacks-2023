@@ -42,7 +42,7 @@ export default class Signup extends Component {
       <div className="App">
 
         <div className="nav">
-        <img style={{marginRight:"950px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
+        <img style={{postion: "absolute", left:"100px", top: "10px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
           <a href="/">Home</a>
         </div>
 
