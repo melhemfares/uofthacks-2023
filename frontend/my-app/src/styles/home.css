@@ -1,4 +1,7 @@
-/* Root */
+body {
+  color: white;
+  background-color: rgb(6, 11, 24);
+}
 
 h1 {
   font-size: 3rem;
@@ -18,7 +21,7 @@ h1 {
 }
 
 .nav {
-  background-color: #14181e;
+  background-color: rgb(11, 18, 37);
   text-align: right;
   padding: 2%;
   position: fixed;
@@ -42,7 +45,7 @@ h1 {
 
 .body {
   padding: 5% 7%;
-  background-color: black;
+  background-color: rgb(6, 11, 24);
   color: rgb(230, 230, 230);
   max-width: 800px;
   width: 100%;

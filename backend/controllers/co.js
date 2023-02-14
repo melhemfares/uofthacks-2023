@@ -8,7 +8,7 @@ const fs = require('fs')
 let rawdata = fs.readFileSync('data.json')
 let examples = JSON.parse(rawdata)
 
-cohere.init(process.env.COHERE_API);
+cohere.init("b67H2HC68MCmLL07Y1C0u7tp8bKli1tqTljXX44R");
 
 const createConversation = async (req,res) => {
   req.body.createdBy = req.user.userId
@@ -58,11 +58,7 @@ const classify = async (req, res) => {
   }); 
   const reply = response.body.generations[0].text
 
-  const msg = await Chat.findOneAndUpdate(
-    { createdBy: req.user.userId },
-    { $push: { conversation: {user: input, cpu: reply} } },
-    { new: true }
-  )
+  const msg =  { conversation: {user: input, cpu: reply} }
   
   console.log(msg)
 

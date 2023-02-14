@@ -15,12 +15,6 @@ const swaggerDocument = YAML.load('./swagger.yaml')
 const express = require('express');
 const app = express();
 
-// connectDB
-const connectDB = require('./db/connect')
-const authenticateUser = require('./middleware/authentication')
-
-// routers
-const authRouter = require('./routes/auth')
 //const jobsRouter = require('./routes/jobs')
 const coRouter = require('./routes/co')
 
@@ -40,24 +34,17 @@ app.use(helmet());
 app.use(cors());
 app.use(xss());
 
-app.get('/',(req,res)=>(
-  res.send('<h1> Jobs API </h1> <a href="/api-docs">Documentation</a>')
-))
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
-// routes
-app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/co', authenticateUser, coRouter)
-//app.use('/api/v1/jobs', authenticateUser, jobsRouter)
+app.use('/api/v1/co', coRouter)
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3008;
 
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URI)
     app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
     );

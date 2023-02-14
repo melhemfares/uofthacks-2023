@@ -7,12 +7,12 @@ function Home() {
       <div className="nav">
         {/* <h6>TherapyAI</h6> */}
         <img style={{postion: "absolute", left:"100px", top: "10px"}} className="nav-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="logo" />
-        <a href="/login">Try TherapyAI</a>
+        <a href="/chat">Try TherapyAI</a>
       </div>
 
       <div className="body">
         <div style={{textAlign: "left", marginTop: 50}}>
-          <h1><img className="chatbot-logo" src="https://cdn-icons-png.flaticon.com/512/5659/5659645.png" alt="chatbot logo"/> TherapyAI.</h1>
+          <h1>TherapyAI.</h1>
           <p>TherapyAI is an online chatbot that gives you instant acess to different 
             resources available to you. It is often the case that there are no real 
             person to talk to during difficult times. Thats when TherapyAI comes into 
@@ -23,7 +23,7 @@ function Home() {
         </div>
 
         <br /> <br />
-        <a className='home-link' href="/login">Try TherapyAI</a>
+        <a className='home-link' href="/chat">Try TherapyAI</a>
         <br /> <br />
         <div className='container'>
             <div className='object'>
